@@ -27,37 +27,56 @@ function Application() {
   ];
 
   const baseTab =
-    "flex flex-col items-center justify-center gap-1 px-5 py-2 transition-colors duration-200 cursor-pointer";
+    "flex flex-col items-center justify-center gap-1 px-4 py-2 transition-colors duration-200 cursor-pointer";
 
   const activeTab = "text-black";
-  const inactiveTab = "text-gray-400 hover:text-gray-600";
+  const inactiveTab = "text-gray-400 hover:text-gray-500";
 
   return (
-    <>
-      <nav className="flex justify-center gap-0 mb-6">
-        {tabs.map((t) => {
-          const isSelected = tab === t.id;
+    <div className="">
+      <nav className="border-b border-gray-200">
+        <div className="px-6 py-3">
+          <div className="max-w-4xl mx-auto flex items-center justify-between">
+            <div className="bg-[#ff7c6b] p-2 rounded-md">
+              <h1 className="font-bold text-2xl text-white">
+                HireMeMaybe
+              </h1>
+            </div>
 
-          return (
-            <button
-              key={t.id}
-              onClick={() => setTab(t.id)}
-              className={`${baseTab} ${
-                isSelected ? activeTab : inactiveTab
-              }`}
-            >
-              {t.icon}
-              <span className="text-xs font-medium tracking-wide">
-                {t.label}
-              </span>
-            </button>
-          );
-        })}
+            <div className="flex items-center gap-2">
+
+              {tabs.map((t) => {
+                const isSelected = tab === t.id;
+
+                return (
+                  <button
+                    key={t.id}
+                    onClick={() => setTab(t.id)}
+                    className={`${baseTab} ${
+                      isSelected ? activeTab : inactiveTab
+                    }`}
+                  >
+                    {t.icon}
+                    <span className="text-xs font-medium tracking-wide">
+                      {t.label}
+                    </span>
+                  </button>
+                );
+              })}
+
+              <button className="ml-2 px-4 py-2 text-xs font-semibold bg-[#ffd76b] text-black rounded-full hover:bg-[#daa000] transition cursor-pointer">
+                Premium
+              </button>
+
+            </div>
+          </div>
+        </div>
       </nav>
 
+      {/* CONTENT */}
       {tab === "home" && <Home />}
       {tab === "jobs" && <Jobs />}
-    </>
+    </div>
   );
 }
 
