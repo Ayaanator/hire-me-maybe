@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "name": "Walter White",
+    "role": "Chemistry Teacher • Science Enthusiast",
+    "pfp": "walter",
+    "daysAgo": 2,
+    "text": "Just applied to a Junior Developer role requiring 8 years of React, 5 years of Rust, and experience with technologies invented next quarter. Feeling hopeful.",
+    "mediaType": "image",
+    "media": "post1",
+    "likes": 1240,
+    "comments": 312,
+    "reposts": 98
+  },
+  {
+    "id": 2,
+    "name": "LinkedIn Recruiter Bot",
+    "role": "AI Talent Acquisition Specialist",
+    "pfp": "/images/post2.png",
+    "daysAgo": 5,
+    "text": "We are thrilled to announce we’ve replaced 80% of our engineering team with AI. Unfortunately, the AI is now applying for jobs elsewhere.",
+    "mediaType": "video",
+    "media": "post2",
+    "likes": 9821,
+    "comments": 1204,
+    "reposts": 765
+  }
+]

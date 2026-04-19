@@ -1,6 +1,6 @@
-import { useState } from "react";
-import Home from "./Home";
-import Jobs from "./Jobs";
+import { useState } from 'react';
+import Home from './Home';
+import Jobs from './Jobs';
 
 function Application() {
   const [tab, setTab] = useState<"home" | "jobs">("home");
@@ -33,8 +33,8 @@ function Application() {
   const inactiveTab = "text-gray-400 hover:text-gray-500";
 
   return (
-    <div className="">
-      <nav className="border-b border-gray-200">
+    <div className="bg-[#fff9ed]">
+      <nav className="border-b border-gray-200 bg-[#ffffff]">
         <div className="px-6 py-3">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
             <div className="bg-[#ff7c6b] p-2 rounded-md">
@@ -73,7 +73,6 @@ function Application() {
         </div>
       </nav>
 
-      {/* CONTENT */}
       {tab === "home" && <Home />}
       {tab === "jobs" && <Jobs />}
     </div>
