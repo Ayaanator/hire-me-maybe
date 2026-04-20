@@ -6,7 +6,21 @@ import { Heart, MessageCircle, Repeat2, Send } from "lucide-react";
 
 
 function Home() {
-  
+  const formatTextWithHashtags = (text) => {
+    return text.split(/(#[a-zA-Z0-9_]+)/g).map((part, index) => {
+      if (part.startsWith("#")) {
+        return (
+          <span
+            key={index}
+            className="text-blue-600 font-medium hover:underline cursor-pointer"
+          >
+            {part}
+          </span>
+        );
+      }
+      return part;
+    });
+  };
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-12 grid-rows-6 gap-4 bg-[#fff9ed]">
@@ -65,14 +79,14 @@ function Home() {
 
             <br></br>
 
-            <h1 className="text-sm">{post.text}</h1>
+            <h1 className="text-sm whitespace-pre-line">{formatTextWithHashtags(post.text)}</h1>
             {post.media && (
               <div className="mt-3">
                 {post.mediaType === "image" && (
                   <img
                     src={post.media}
                     alt="post media"
-                    className="rounded-md w-full max-h-[400px] object-cover border border-gray-200"
+                    className="rounded-md w-full object-cover border border-gray-200"
                   />
                 )}
 
@@ -80,7 +94,7 @@ function Home() {
                   <video
                     src={post.media}
                     controls
-                    className="rounded-md w-full max-h-[400px] border border-gray-200"
+                    className="rounded-md w-full border border-gray-200"
                   />
                 )}
 
