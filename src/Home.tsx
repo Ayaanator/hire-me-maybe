@@ -1,11 +1,24 @@
 import { useState } from 'react'
 import arthur from '././assets/arthur.jpg'
 import stories from './stories.json'
-import posts from "./posts.json"
-import { Heart, MessageCircle, Repeat2, Send } from "lucide-react";
-
+import posts from './posts.json'
+import { Heart, MessageCircle, Repeat2, Send } from 'lucide-react';
+import useInteract from './store.js'
+import { useEffect } from "react";
 
 function Home() {
+  const interactState = useInteract((state) => state.interactState);
+  const setInteractState = useInteract((state) => state.setInteractState);
+
+  //const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    if(interactState) {
+      console.log(interactState);
+      //setShowModal(true);
+    }
+  }, [interactState])
+
   const formatTextWithHashtags = (text) => {
     return text.split(/(#[a-zA-Z0-9_]+)/g).map((part, index) => {
       if (part.startsWith("#")) {
@@ -70,7 +83,8 @@ function Home() {
               </div>
 
               <div>
-                <button className="flex items-center gap-1 text-blue-600 hover:bg-blue-100 px-3 py-1 rounded-md transition-all duration-400 cursor-pointer">
+                <button className="flex items-center gap-1 text-blue-600 hover:bg-blue-100 px-3 py-1 rounded-md transition-all duration-400 cursor-pointer"
+                onClick={() => {setInteractState("Follow")}}>
                   <span className="text-lg leading-none">+</span>
                   <span className="text-sm font-medium">Follow</span>
                 </button>
@@ -105,22 +119,26 @@ function Home() {
 
                 <div className="flex justify-around mt-4 pt-3 border-t border-gray-200">
   
-                  <button className="flex flex-col items-center gap-1 text-gray-600 hover:text-red-500 transition-all duration-200 hover:scale-120 cursor-pointer">
+                  <button onClick={() => {setInteractState("Like")}}
+                  className="flex flex-col items-center gap-1 text-gray-600 hover:text-red-500 transition-all duration-200 hover:scale-120 cursor-pointer" >
                     <Heart size={20} />
                     <span className="text-xs">Like</span>
                   </button>
 
-                  <button className="flex flex-col items-center gap-1 text-gray-600 hover:text-blue-500 transition-all duration-200 hover:scale-120 cursor-pointer">
+                  <button onClick={() => {setInteractState("Comment")}}
+                  className="flex flex-col items-center gap-1 text-gray-600 hover:text-blue-500 transition-all duration-200 hover:scale-120 cursor-pointer">
                     <MessageCircle size={20} />
                     <span className="text-xs">Comment</span>
                   </button>
 
-                  <button className="flex flex-col items-center gap-1 text-gray-600 hover:text-green-500 transition-all duration-200 hover:scale-120 cursor-pointer">
+                  <button onClick={() => {setInteractState("Repost")}}
+                  className="flex flex-col items-center gap-1 text-gray-600 hover:text-green-500 transition-all duration-200 hover:scale-120 cursor-pointer">
                     <Repeat2 size={20} />
                     <span className="text-xs">Repost</span>
                   </button>
 
-                  <button className="flex flex-col items-center gap-1 text-gray-600 hover:text-purple-500 transition-all duration-200 hover:scale-120 cursor-pointer">
+                  <button onClick={() => {setInteractState("Send")}}
+                  className="flex flex-col items-center gap-1 text-gray-600 hover:text-purple-500 transition-all duration-200 hover:scale-120 cursor-pointer">
                     <Send size={20} />
                     <span className="text-xs">Send</span>
                   </button>
@@ -142,6 +160,34 @@ function Home() {
           </div>
         ))}
       </div>
+
+      {interactState && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
+            <h2 className="text-lg font-semibold mb-4">
+              Whoops! You've run out of {interactState} tokens!
+            </h2>
+
+            <div className="flex flex-row gap-3">
+              <button
+                onClick={() => setInteractState("")}
+                className="bg-blue-500 text-white rounded-md
+                text-sm p-2"
+              >
+                Buy 100 extra {interactState} tokens for $12.99
+              </button>
+
+              <button
+                onClick={() => setInteractState("")}
+                className="bg-[#ffd76b] text-black rounded-md
+                text-sm p-2"
+              >
+                HireMeMaybe Premium
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
