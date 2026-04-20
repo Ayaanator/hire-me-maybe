@@ -2,8 +2,12 @@ import { useState } from 'react'
 import arthur from '././assets/arthur.jpg'
 import stories from './stories.json'
 import posts from "./posts.json"
+import { Heart, MessageCircle, Repeat2, Send } from "lucide-react";
+
 
 function Home() {
+  
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-12 grid-rows-6 gap-4 bg-[#fff9ed]">
 
@@ -40,13 +44,14 @@ function Home() {
             <div className="flex flex-row items-center gap-3 justify-between">
               <div className="flex flex-row gap-3 items-center">
                 <img
-                  src={arthur}
+                  src={post.pfp}
                   alt="profile"
                   className="w-14 h-14 rounded-full object-cover border border-gray-200"
                 />
                 <div className="leading-tight">
                   <h1 className="font-semibold">{post.name}</h1>
                   <h1 className="text-gray-600">{post.role}</h1>
+                  <h1 className="text-gray-600">{post.daysAgo} days ago</h1>
                 </div>
               </div>
 
@@ -61,6 +66,53 @@ function Home() {
             <br></br>
 
             <h1 className="text-sm">{post.text}</h1>
+            {post.media && (
+              <div className="mt-3">
+                {post.mediaType === "image" && (
+                  <img
+                    src={post.media}
+                    alt="post media"
+                    className="rounded-md w-full max-h-[400px] object-cover border border-gray-200"
+                  />
+                )}
+
+                {post.mediaType === "video" && (
+                  <video
+                    src={post.media}
+                    controls
+                    className="rounded-md w-full max-h-[400px] border border-gray-200"
+                  />
+                )}
+
+                <div className="mt-3 flex flex-row justify-between text-gray-500">
+                  <h1>Liked by {post.likes} others</h1>
+                  <h1>{post.comments} comments</h1>
+                </div>
+
+                <div className="flex justify-around mt-4 pt-3 border-t border-gray-200">
+  
+                  <button className="flex flex-col items-center gap-1 text-gray-600 hover:text-red-500 transition-all duration-200 hover:scale-120 cursor-pointer">
+                    <Heart size={20} />
+                    <span className="text-xs">Like</span>
+                  </button>
+
+                  <button className="flex flex-col items-center gap-1 text-gray-600 hover:text-blue-500 transition-all duration-200 hover:scale-120 cursor-pointer">
+                    <MessageCircle size={20} />
+                    <span className="text-xs">Comment</span>
+                  </button>
+
+                  <button className="flex flex-col items-center gap-1 text-gray-600 hover:text-green-500 transition-all duration-200 hover:scale-120 cursor-pointer">
+                    <Repeat2 size={20} />
+                    <span className="text-xs">Repost</span>
+                  </button>
+
+                  <button className="flex flex-col items-center gap-1 text-gray-600 hover:text-purple-500 transition-all duration-200 hover:scale-120 cursor-pointer">
+                    <Send size={20} />
+                    <span className="text-xs">Send</span>
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>
