@@ -23,7 +23,7 @@ function Home() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-12 grid-rows-6 gap-4 bg-[#fff9ed]">
+    <div className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-12 gap-4 bg-[#fff9ed] items-start">
 
       <div className="col-span-3 flex flex-col gap-3 sticky self-start top-6">
         <div className="border border-gray-300 p-4 rounded-md bg-[#ffffff]">
