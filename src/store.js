@@ -5,4 +5,14 @@ const useInteract = create((set) => ({
   setInteractState: (value) => set({ interactState: value }),
 }));
 
-export default useInteract;
+const usePremium = create((set) => ({
+  premiumState: "",
+  setPremiumState: (value) => set({ premiumState: value }),
+}));
+
+const useCredit = create((set) => ({
+  creditState: "",
+  setCreditState: (value) => set({ creditState: value }),
+}));
+
+export { useInteract, usePremium, useCredit };

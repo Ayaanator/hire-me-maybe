@@ -1,9 +1,14 @@
 import { useState } from 'react';
 import Home from './Home';
 import Jobs from './Jobs';
+import PremiumModal from './PremiumModal'
+import { usePremium } from './store.js'
 
 function Application() {
   const [tab, setTab] = useState<"home" | "jobs">("home");
+
+  const premiumState = usePremium((state) => state.premiumState);
+  const setPremiumState = usePremium((state) => state.setPremiumState);
 
   const tabs = [
     {
@@ -64,7 +69,8 @@ function Application() {
                 );
               })}
 
-              <button className="ml-2 px-4 py-2 text-xs font-semibold bg-[#ffd76b] text-black rounded-full hover:bg-[#daa000] transition cursor-pointer">
+              <button onClick={() => setPremiumState("true")}
+              className="ml-2 px-4 py-2 text-xs font-semibold bg-[#ffd76b] text-black rounded-full hover:bg-[#daa000] transition cursor-pointer">
                 Premium
               </button>
 
@@ -75,6 +81,8 @@ function Application() {
 
       {tab === "home" && <Home />}
       {tab === "jobs" && <Jobs />}
+
+      <PremiumModal/>
     </div>
   );
 }

@@ -1,21 +1,24 @@
 import { useState } from 'react'
-import arthur from '././assets/arthur.jpg'
-import stories from './stories.json'
 import posts from './posts.json'
-import { Heart, MessageCircle, Repeat2, Send } from 'lucide-react';
-import useInteract from './store.js'
-import { useEffect } from "react";
+import { Heart, MessageCircle, Repeat2, Send, X } from 'lucide-react'
+import { useEffect } from 'react';
+import { useInteract, usePremium, useCredit } from './store.js'
+import PremiumModal from './PremiumModal'
+import CreditModal from './CreditModal'
+import News from './News'
+import Profile from './Profile'
 
 function Home() {
   const interactState = useInteract((state) => state.interactState);
   const setInteractState = useInteract((state) => state.setInteractState);
 
-  //const [showModal, setShowModal] = useState(false);
+  const premiumState = usePremium((state) => state.premiumState);
+  const setPremiumState = usePremium((state) => state.setPremiumState);
 
   useEffect(() => {
     if(interactState) {
       console.log(interactState);
-      //setShowModal(true);
+      console.log(premiumState);
     }
   }, [interactState])
 
@@ -38,29 +41,7 @@ function Home() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-12 gap-4 bg-[#fff9ed] items-start">
 
-      <div className="col-span-3 flex flex-col gap-3 sticky self-start top-6">
-        <div className="border border-gray-300 p-4 rounded-md bg-[#ffffff]">
-          <img
-            src={arthur}
-            alt="profile"
-            className="w-24 h-24 rounded-full object-cover border border-gray-200 mb-4"
-          />
-          <h2 className="font-semibold">Arthur Morgan</h2>
-          <p className="text-sm text-gray-500">
-            Professional Gunslinger <br/> Bounty Hunter <br/> Farm Hand <br/> 
-            Van Der Linde Gang Executive
-          </p>
-        </div>
-        <div className="border border-gray-300 p-3 rounded-md bg-[#ffffff]">
-          <h3 className="font-semibold text-sm mb-2">
-            Applications Status
-          </h3>
-          <div className="flex justify-between text-sm">
-            <span className="text-green-600">Accepted: 0</span>
-            <span className="text-red-500">Rejected: 378456</span>
-          </div>
-        </div>
-      </div>
+      <Profile/>
 
       <div className="col-span-6 flex flex-col gap-3">
         {posts.map((post) => (
@@ -149,23 +130,19 @@ function Home() {
         ))}
       </div>
 
-      <div className="col-span-3 border border-gray-300 p-3 rounded-md bg-[#ffffff]">
-        <h1 className="font-bold text-2xl">HireMeMaybe News</h1>
-        <h1 className="font-semibold text-1xl mb-5">Top Stories</h1>
-
-        {stories.map((story) => (
-          <div key={story.id} className="w-full p-2 rounded-md hover:bg-gray-200 cursor-pointer transition-all duration-400">
-            <h3 className="hover:underline cursor-pointer">{story.title}</h3>
-            <p className="text-gray-500">{story.hoursAgo} hours ago • {story.readers} readers</p>
-          </div>
-        ))}
-      </div>
+      <News/>
 
       {interactState && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-100 text-center relative">
+            <button
+              onClick={() => setInteractState("")}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+            >
+              <X size={20} />
+            </button>
             <h2 className="text-lg font-semibold mb-4">
-              Whoops! You've run out of {interactState} tokens!
+              Whoops! You've run out of <b>{interactState}</b> tokens!
             </h2>
 
             <div className="flex flex-row gap-3">
@@ -178,7 +155,7 @@ function Home() {
               </button>
 
               <button
-                onClick={() => setInteractState("")}
+                onClick={() => {setInteractState(""); setPremiumState("true");}}
                 className="bg-[#ffd76b] text-black rounded-md
                 text-sm p-2"
               >
@@ -188,6 +165,9 @@ function Home() {
           </div>
         </div>
       )}
+
+      <PremiumModal/>
+      <CreditModal/>
 
     </div>
   );
