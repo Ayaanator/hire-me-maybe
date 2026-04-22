@@ -39,7 +39,7 @@ function Application() {
 
   return (
     <div className="bg-[#fff9ed]">
-      <nav className="border-b border-gray-200 bg-[#ffffff]">
+      <nav className="relative z-20 border-b border-gray-200 bg-white shadow-[0_10px_20px_-8px_rgba(0,0,0,0.35)]">
         <div className="px-6 py-3">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
             <div className="bg-[#ff7c6b] p-2 rounded-md">
