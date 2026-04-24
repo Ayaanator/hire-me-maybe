@@ -2,7 +2,7 @@ import { useState } from 'react'
 import posts from './posts.json'
 import { Heart, MessageCircle, Repeat2, Send, X } from 'lucide-react'
 import { useEffect } from 'react';
-import { useInteract, usePremium, useCredit } from './store.js'
+import { useInteract, usePremium } from './store.js'
 import PremiumModal from './PremiumModal'
 import CreditModal from './CreditModal'
 import News from './News'
