@@ -1,22 +1,59 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react';
 import jobs from './jobs.json'
-import { useInteract, usePremium, useCredit } from './store.js'
+import { useInteract } from './store.js'
 import PremiumModal from './PremiumModal'
 import CreditModal from './CreditModal'
 import InteractModal from './InteractModal'
 
 function Jobs() {
+  
   const [selectedJobId, setSelectedJobId] = useState<number | null>(null);
   const selectedJob = jobs.find(job => job.id === selectedJobId);
 
   const setInteractState = useInteract((state) => state.setInteractState);
+
+  const [jobMetrics, setJobMetrics] = useState(() => {
+    const initial = {};
+
+    jobs.forEach(job => {
+      initial[job.id] = {
+        seconds: Math.floor(Math.random() * 20),
+        applicants: Math.floor(Math.random() * 201) + 900
+      };
+    });
+
+    return initial;
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setJobMetrics(prev => {
+        const updated = { ...prev };
+
+        for (const id in updated) {
+          updated[id] = {
+            seconds: updated[id].seconds + 1,
+            applicants:
+              updated[id].applicants +
+              Math.floor(Math.random() * 200) + 700
+          };
+        }
+
+        return updated;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const metrics = selectedJob ? jobMetrics[selectedJob.id] : null;
 
   return (
   <div className="max-w-6xl mx-auto grid grid-cols-12  bg-[#fff9ed] items-start">
 
     <div className="col-span-5 flex flex-col gap-3 bg-white  border-1 border-gray-300 border-t-0 border-r-0">
       <h1 className="text-2xl font-semibold p-2">Top job picks for you</h1>
-      <h1 className="text-sm p-2">Based on your profile, preferences, unpaid emotional labor, and your ability to click “I Agree” without reading anything</h1>
+      <h1 className="text-sm p-2">Based on your profile, search history, preferences, unpaid emotional labor, and your ability to click “I Agree” without reading anything</h1>
       <h1 className="text-sm p-2">314 results</h1>
 
       <div>
@@ -66,6 +103,9 @@ function Jobs() {
               <p className="text-sm text-gray-500">
                 {selectedJob.workType} • {selectedJob.employmentType}
               </p>
+              <p className="text-sm text-gray-500">
+                {metrics?.seconds} seconds ago • Over {metrics?.applicants?.toLocaleString()} people clicked apply
+              </p>
             </div>
             <button onClick={() => {setInteractState("Apply")}}
             className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:cursor-pointer">
@@ -110,6 +150,9 @@ function Jobs() {
                 <li key={i}>{item}</li>
               ))}
             </ul>
+
+            <h3 className="font-semibold mt-2 mb-2">Salary</h3>
+            <h1>{selectedJob.salary}</h1>
           </div>
         </>
       )}
