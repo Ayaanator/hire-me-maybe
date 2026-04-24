@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Application from './Application'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Jobs from './Jobs';
 import Apply from './Apply';
 
 

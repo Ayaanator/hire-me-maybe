@@ -6,6 +6,7 @@ function Apply() {
   const { id } = useParams();
 
   const selectedJob = jobs.find((job) => job.id === Number(id));
+  const [captchaNum, setCaptchaNum] = useState(0);
 
   const [resume, setResume] = useState<File | null>(null);
   const [experience, setExperience] = useState("");
@@ -181,7 +182,11 @@ function Apply() {
             answers,
           });
 
-          alert("Application submitted into the void");
+          setCaptchaNum(prev => (prev + 1) % Object.keys(selectedJob.captchas).length); 
+          console.log(Object.keys(selectedJob.captchas).length);
+          console.log(captchaNum);
+          window.open(`${selectedJob.captchas[captchaNum]}`, "_blank");
+          // alert("Application submitted into the void");
         }}
       >
         Submit Application
