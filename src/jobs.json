@@ -96,6 +96,11 @@
       ]
     },
 
-    "captchas": {}
+    "captchas": [
+      "https://kitboga.com/codejam25/74", 
+      "https://kitboga.com/codejam25/65",
+      "https://kitboga.com/codejam25/32",
+      "https://kitboga.com/codejam25/4",
+      "https://kitboga.com/codejam25/35"]
   }
 ]

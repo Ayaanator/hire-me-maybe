@@ -1,4 +1,6 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
+
 
 const useInteract = create((set) => ({
   interactState: "",
@@ -15,4 +17,9 @@ const useCredit = create((set) => ({
   setCreditState: (value) => set({ creditState: value }),
 }));
 
-export { useInteract, usePremium, useCredit };
+const useJob = create((set) => ({
+  jobState: "",
+  setJobState: (value) => set({ jobState: value }),
+}));
+
+export { useInteract, usePremium, useCredit, useJob};

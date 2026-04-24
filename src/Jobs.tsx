@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
 import jobs from './jobs.json'
-import { useInteract } from './store.js'
+import { useInteract, useJob } from './store.js'
 import PremiumModal from './PremiumModal'
 import CreditModal from './CreditModal'
 import InteractModal from './InteractModal'
 
 function Jobs() {
+  const jobState = useJob((s) => s.jobState);
+  const setJobState = useJob((s) => s.setJobState);
   
-  const [selectedJobId, setSelectedJobId] = useState<number | null>(null);
-  const selectedJob = jobs.find(job => job.id === selectedJobId);
-
+  const selectedJob = jobs.find(job => job.id === jobState);
   const setInteractState = useInteract((state) => state.setInteractState);
+
 
   const [jobMetrics, setJobMetrics] = useState(() => {
     const initial = {};
@@ -58,12 +59,12 @@ function Jobs() {
 
       <div>
         {jobs.map((job) => {
-          const isSelected = selectedJobId === job.id;
+          const isSelected = jobState === job.id;
 
           return (
             <div
               key={job.id}
-              onClick={() => setSelectedJobId(job.id)}
+              onClick={() => setJobState(job.id)}
               className={`relative border border-gray-300 p-2 cursor-pointer
                 ${isSelected ? "bg-gray-100" : ""}
               `}
@@ -107,9 +108,13 @@ function Jobs() {
                 {metrics?.seconds} seconds ago • Over {metrics?.applicants?.toLocaleString()} people clicked apply
               </p>
             </div>
-            <button onClick={() => {setInteractState("Apply")}}
+            <button onClick={() =>
+                Object.keys(selectedJob.captchas).length === 0
+                  ? setInteractState("Apply")
+                  : window.open("/captcha", "_blank")
+              }
             className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:cursor-pointer">
-              Apply
+              {Object.keys(selectedJob.captchas).length === 0 ? "" : "Free "} Apply
             </button>
           </div>
 
