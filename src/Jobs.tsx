@@ -4,6 +4,8 @@ import { useInteract, useJob } from './store.js'
 import PremiumModal from './PremiumModal'
 import CreditModal from './CreditModal'
 import InteractModal from './InteractModal'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Apply from './Apply';
 
 function Jobs() {
   const jobState = useJob((s) => s.jobState);
@@ -108,11 +110,17 @@ function Jobs() {
                 {metrics?.seconds} seconds ago • Over {metrics?.applicants?.toLocaleString()} people clicked apply
               </p>
             </div>
-            <button onClick={() =>
-                Object.keys(selectedJob.captchas).length === 0
-                  ? setInteractState("Apply")
-                  : window.open("/captcha", "_blank")
+            <button onClick={() => {
+              const hasCaptchas = Object.keys(selectedJob.captchas).length > 0;
+
+              setJobState(selectedJob.id);
+
+              if (hasCaptchas) {
+                window.open(`/apply/${selectedJob.id}`, "_blank");
+              } else {
+                setInteractState("Apply");
               }
+            }}
             className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:cursor-pointer">
               {Object.keys(selectedJob.captchas).length === 0 ? "" : "Free "} Apply
             </button>
