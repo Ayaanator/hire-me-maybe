@@ -9,11 +9,11 @@
     "salary": "CA$20K/yr - CA$30k/yr",
     "profile": "/profiles/dollarama.jpg",
     "tags": [
-      "Robotics",
-      "Distributed Systems",
-      "Cloud",
-      "AI/ML",
-      "Internship"
+      "Perceived Need Engineering",
+      "Retail Existentialism",
+      "AI-Driven Guesswork",
+      "Infinite Refactoring",
+      "Philosophical Inventory"
     ],
     "description": "Millions of customers pass through Dollarama every day in search of possibility, affordability, and items they did not know they needed until they saw them. At Dollarama, we are on a mission to redefine accessible consumption by transforming everyday transactions into meaningful moments of perceived value.\n\nAs part of our engineering team, you will help power systems that enable customers to discover, evaluate, and ultimately purchase products that may or may not meaningfully improve their lives, depending on how effectively we communicate their importance.\n\nHere, innovation means scaling low-cost retail to high-impact digital experiences, where real-time shelf simulation, global discount logistics, and AI-driven inventory intuition come together to create a seamless journey from curiosity to checkout.\n\nWe believe in building with purpose, even when that purpose is continuously evolving. You will work in an environment where ambiguity fuels creativity, requirements are living conversations, and every deployment is an opportunity to redefine what was previously considered finished.\n\nAt Dollarama, technology is more than infrastructure. It is a storytelling engine that shapes perception, drives engagement, and unlocks new ways to deliver value at scale.\n\nJoin us in creating systems that empower millions to make confident purchasing decisions, even when those decisions are, at their core, entirely optional and a reflection of our success in shaping perceived need.",
     "responsibilities": [
@@ -53,19 +53,19 @@
   },
   {
     "id": 2,
-    "title": "Software Development Engineer Intern - 2026",
+    "title": "Software Development Intern",
     "company": "FreshCo",
-    "location": "Toronto, ON",
+    "location": "Toronto, Ontario",
     "workType": "On-site",
     "employmentType": "Full-time",
     "salary": "CA$30K/yr - CA$40k/yr",
     "profile": "/profiles/freshco.jpg",
     "tags": [
-      "Robotics",
-      "Distributed Systems",
-      "Cloud",
-      "AI/ML",
-      "Internship"
+      "Entry-Level Senior Role",
+      "Buzzword Fluency",
+      "AI Replacement Training",
+      "Perpetual Ownership",
+      "Character-Building Deadlines"
     ],
     "description": "At FreshCo, we are thrilled, humbled, and deeply excited to announce an exciting opportunity for an entry-level intern role that requires the experience, resilience, and emotional stability of a senior engineer with 10+ years in the field.\n\nAs part of our team, you will work on mission-critical systems that power millions of customer experiences worldwide, while also occasionally updating button colors and writing documentation that will never be read again.\n\nWe are a family. This means we support each other, grow together, and occasionally undergo restructuring together. Please note that family membership may be revoked at any time based on quarterly performance metrics.\n\nIn this role, you will take full ownership of your work, your team’s work, and problems that existed long before you joined. You will be expected to deliver high-quality, production-ready code in an environment where timelines are ambitious, requirements are fluid, and expectations are described as ‘flexible.’\n\nYou will also have the opportunity to work with cutting-edge AI tools, which may or may not eventually replace parts of your workflow. Familiarity with these tools is required, as you will be evaluated on your ability to both use and compete with them.\n\nApplicants should demonstrate a strong passion for being underpaid relative to market value, paired with a willingness to describe this as ‘an incredible learning opportunity.’\n\nAs part of the application process, you may be asked to complete several short assessments, personality evaluations, and captcha verifications to confirm that you are, in fact, human. Please note that failure to correctly identify traffic lights, bicycles, or slightly distorted letters may result in immediate disqualification.\n\nWe encourage candidates to bring their authentic selves to work, provided those selves align with our core values, communication style, and brand guidelines.\n\nJoin us in building the future of technology, one sprint at a time, and experience the excitement of seeing your code deployed to production shortly before being refactored by someone else. Apply today to take the first step in a rewarding journey where you will grow, learn, and occasionally wonder if the robots you are helping build are quietly preparing to take your place.",
     "responsibilities": [
@@ -113,11 +113,11 @@
     "salary": "CA$10K/yr - CA$20k/yr",
     "profile": "/profiles/amazon.jpg",
     "tags": [
-      "Leadership",
-      "Strategic Thinking",
-      "Cleaning",
-      "Task Management",
-      "Customer Service"
+      "Streak Optimization",
+      "Clarity Engineering",
+      "Recursive Cleaning",
+      "Reflection Management",
+      "Futile Perfection"
     ],
     "description": "Amazon is seeking a Glass Cleaning Intern to help maintain the visual illusion that everything is under control.\n\nIn this role, you will be responsible for restoring transparency to surfaces that immediately lose it, often within seconds. Tasks include removing fingerprints, questioning your standards, and re-cleaning areas that were already clean but are now, apparently, not.\n\nAs part of our team, you will work on mission-critical glass infrastructures that power millions of customer reflections worldwide, while also occasionally wiping the same window multiple times because someone walked past it and breathed. You will collaborate with cross-functional teams across multiple time zones, ensuring that glass remains transparent regardless of when it becomes dirty again.\n\nYou will operate in a fast-paced environment where definitions of “spotless” shift depending on lighting, management perspective, and who is currently looking at the glass.\n\nYou should possess the instincts of someone who has spent a decade chasing invisible streaks and losing arguments with sunlight.\n\nYou will also have the opportunity to work with cutting-edge AI-assisted cleaning systems, which may or may not eventually replace your ability to clean glass. Familiarity with these tools is required, as you will be evaluated on your ability to both use them and outperform them.\n\nCompensation is competitive in the sense that it exists.\n\nSuccessful candidates are detail-oriented, resilient, and capable of accepting that perfection is both expected and temporary.\n\nApply today to take the first step in a rewarding journey where you will grow, learn, and occasionally wonder if the automated cleaning systems you are helping train are quietly preparing to achieve a higher standard of cleanliness than you ever could.",    
     "responsibilities": [
@@ -151,5 +151,77 @@
       "https://kitboga.com/codejam25/46", 
       "https://kitboga.com/codejam25/47",
       "https://kitboga.com/codejam25/30" ]
+  }, 
+  {
+    "id": 4,
+    "title": "Machine Learning Engineer",
+    "company": "Google",
+    "location": "Paris, France",
+    "workType": "On-site",
+    "employmentType": "Full-time",
+    "salary": "CA$40K/yr - CA$50k/yr",
+    "profile": "/profiles/google.jpg",
+    "tags": [
+      "Machine Learning",
+      "Model Optimization",
+      "Data Infrastructure",
+      "Scalable AI Systems",
+      "Responsible AI (Optional)"
+    ],
+    "description": "PREMIUM_PAYWALL"
+  },
+  {
+    "id": 4,
+    "title": "Machine Learning Engineer",
+    "company": "Google",
+    "location": "Paris, France",
+    "workType": "On-site",
+    "employmentType": "Full-time",
+    "salary": "CA$40K/yr - CA$50k/yr",
+    "profile": "/profiles/google.jpg",
+    "tags": [
+      "Machine Learning",
+      "Model Optimization",
+      "Data Infrastructure",
+      "Scalable AI Systems",
+      "Responsible AI (Optional)"
+    ],
+    "description": "PREMIUM_PAYWALL"
+  },
+  {
+    "id": 4,
+    "title": "Machine Learning Engineer",
+    "company": "Google",
+    "location": "Paris, France",
+    "workType": "On-site",
+    "employmentType": "Full-time",
+    "salary": "CA$40K/yr - CA$50k/yr",
+    "profile": "/profiles/google.jpg",
+    "tags": [
+      "Machine Learning",
+      "Model Optimization",
+      "Data Infrastructure",
+      "Scalable AI Systems",
+      "Responsible AI (Optional)"
+    ],
+    "description": "PREMIUM_PAYWALL"
+  },
+  {
+    "id": 4,
+    "title": "Machine Learning Engineer",
+    "company": "Google",
+    "location": "Paris, France",
+    "workType": "On-site",
+    "employmentType": "Full-time",
+    "salary": "CA$40K/yr - CA$50k/yr",
+    "profile": "/profiles/google.jpg",
+    "tags": [
+      "Machine Learning",
+      "Model Optimization",
+      "Data Infrastructure",
+      "Scalable AI Systems",
+      "Responsible AI (Optional)"
+    ],
+    "description": "PREMIUM_PAYWALL"
   }
 ]
