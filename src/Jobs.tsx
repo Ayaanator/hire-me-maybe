@@ -20,7 +20,7 @@ function Jobs() {
 
     jobs.forEach(job => {
       initial[job.id] = {
-        seconds: Math.floor(Math.random() * 20),
+        seconds: Math.floor((Math.random() * 150)),
         applicants: Math.floor(Math.random() * 201) + 900
       };
     });
@@ -169,6 +169,7 @@ function Jobs() {
 
             <h3 className="font-semibold mt-2 mb-2">Salary</h3>
             <h1>{selectedJob.salary}</h1>
+            <h1 className="text-gray-100">Compensation, equity, bonuses, pension, and vacation days not included</h1>
           </div>
         </>
       ) : (

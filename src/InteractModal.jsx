@@ -1,9 +1,10 @@
 import { X } from "lucide-react";
-import { usePremium, useCredit, useInteract } from "./store.js";
+import { usePremium, useInteract } from "./store.js";
 
 function PremiumModal() {
   const interactState = useInteract((s) => s.interactState);
   const setInteractState = useInteract((s) => s.setInteractState);
+  const setPremiumState = usePremium((state) => state.setPremiumState);
 
   if (!interactState) return null;
 
