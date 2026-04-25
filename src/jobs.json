@@ -161,67 +161,50 @@
     "employmentType": "Full-time",
     "salary": "CA$40K/yr - CA$50k/yr",
     "profile": "/profiles/google.jpg",
-    "tags": [
-      "Machine Learning",
-      "Model Optimization",
-      "Data Infrastructure",
-      "Scalable AI Systems",
-      "Responsible AI (Optional)"
-    ],
     "description": "PREMIUM_PAYWALL"
   },
   {
-    "id": 4,
-    "title": "Machine Learning Engineer",
-    "company": "Google",
-    "location": "Paris, France",
-    "workType": "On-site",
+    "id": 5,
+    "title": "Backend Platform Architect",
+    "company": "Stripe",
+    "location": "San Francisco, USA",
+    "workType": "Hybrid",
     "employmentType": "Full-time",
-    "salary": "CA$40K/yr - CA$50k/yr",
-    "profile": "/profiles/google.jpg",
-    "tags": [
-      "Machine Learning",
-      "Model Optimization",
-      "Data Infrastructure",
-      "Scalable AI Systems",
-      "Responsible AI (Optional)"
-    ],
+    "salary": "CA$70K/yr - CA$95k/yr",
+    "profile": "/profiles/stripe.jpg",
     "description": "PREMIUM_PAYWALL"
   },
   {
-    "id": 4,
-    "title": "Machine Learning Engineer",
-    "company": "Google",
-    "location": "Paris, France",
+    "id": 6,
+    "title": "AI Research Assistant",
+    "company": "DeepMind",
+    "location": "London, UK",
     "workType": "On-site",
     "employmentType": "Full-time",
-    "salary": "CA$40K/yr - CA$50k/yr",
-    "profile": "/profiles/google.jpg",
-    "tags": [
-      "Machine Learning",
-      "Model Optimization",
-      "Data Infrastructure",
-      "Scalable AI Systems",
-      "Responsible AI (Optional)"
-    ],
+    "salary": "CA$80K/yr - CA$110k/yr",
+    "profile": "/profiles/deepmind.jpg",
     "description": "PREMIUM_PAYWALL"
   },
   {
-    "id": 4,
-    "title": "Machine Learning Engineer",
-    "company": "Google",
-    "location": "Paris, France",
+    "id": 7,
+    "title": "Cashier",
+    "company": "Walmart",
+    "location": "Dublin, Ireland",
     "workType": "On-site",
     "employmentType": "Full-time",
-    "salary": "CA$40K/yr - CA$50k/yr",
-    "profile": "/profiles/google.jpg",
-    "tags": [
-      "Machine Learning",
-      "Model Optimization",
-      "Data Infrastructure",
-      "Scalable AI Systems",
-      "Responsible AI (Optional)"
-    ],
+    "salary": "CA$25K/yr - CA$30k/yr",
+    "profile": "/profiles/walmart.jpg",
+    "description": "PREMIUM_PAYWALL"
+  },
+  {
+    "id": 8,
+    "title": "Data Engineer",
+    "company": "Spotify",
+    "location": "Stockholm, Sweden",
+    "workType": "Hybrid",
+    "employmentType": "Full-time",
+    "salary": "CA$60K/yr - CA$85k/yr",
+    "profile": "/profiles/spotify.jpg",
     "description": "PREMIUM_PAYWALL"
   }
 ]

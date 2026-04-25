@@ -1,7 +1,5 @@
-import { useState } from 'react'
 import posts from './posts.json'
-import { Heart, MessageCircle, Repeat2, Send, X } from 'lucide-react'
-import { useEffect } from 'react';
+import { Heart, MessageCircle, Repeat2, Send } from 'lucide-react'
 import { useInteract, usePremium } from './store.js'
 import PremiumModal from './PremiumModal'
 import CreditModal from './CreditModal'
@@ -10,17 +8,8 @@ import Profile from './Profile'
 import InteractModal from './InteractModal'
 
 function Home() {
-  const interactState = useInteract((state) => state.interactState);
   const setInteractState = useInteract((state) => state.setInteractState);
-
-  const premiumState = usePremium((state) => state.premiumState);
-
-  useEffect(() => {
-    if(interactState) {
-      console.log(interactState);
-      console.log(premiumState);
-    }
-  }, [interactState])
+  const setPremiumState = usePremium((state) => state.setPremiumState);
 
   const formatTextWithHashtags = (text) => {
     return text.split(/(#[a-zA-Z0-9_]+)/g).map((part, index) => {
@@ -128,11 +117,28 @@ function Home() {
             )}
           </div>
         ))}
-      </div>
+        
+        <div className="border border-gray-300 p-3 rounded-md bg-gray-100 flex flex-col items-center justify-center text-center">
+          <h1 className="text-lg font-semibold mb-2">
+            Post limit reached
+          </h1>
 
+          <p className="text-sm text-gray-600 mb-4">
+            You’ve reached your daily free doomscrolling limit. Upgrade to Premium to unlock unlimited feed access.
+          </p>
+
+          <button
+            onClick={() => setPremiumState("true")}
+            className="bg-[#ffd76b] text-black px-5 py-2 text-sm font-semibold rounded-full hover:bg-[#daa000] transition cursor-pointer"
+          >
+            Unlock Premium Feed
+          </button>
+        </div>
+
+      </div>
+      
       <News/>
 
-      
       <InteractModal/>
       <PremiumModal/>
       <CreditModal/>

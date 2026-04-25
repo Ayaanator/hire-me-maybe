@@ -6,8 +6,6 @@ import { usePremium } from './store.js'
 
 function Application() {
   const [tab, setTab] = useState<"home" | "jobs">("home");
-
-  const premiumState = usePremium((state) => state.premiumState);
   const setPremiumState = usePremium((state) => state.setPremiumState);
 
   const tabs = [

@@ -92,6 +92,26 @@ function Jobs() {
             </div>
           );
         })}
+        <div className="border border-dashed border-gray-300 p-4 bg-gray-100 flex flex-col gap-2">
+          <h1 className="text-sm font-semibold text-gray-700">
+            You’ve reached your daily job browsing limit
+          </h1>
+
+          <p className="text-xs text-gray-500">
+            Free users can only view a limited number of opportunities per session.
+            Upgrade to Premium to unlock unlimited access.
+          </p>
+
+          <div className="flex items-center justify-between mt-2">
+
+            <button
+              onClick={() => setPremiumState("true")}
+              className="bg-[#ffd76b] text-black text-xs px-3 py-1 rounded-full hover:bg-[#daa000] transition cursor-pointer"
+            >
+              Upgrade
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -175,7 +195,7 @@ function Jobs() {
       ) : (
         <div className="flex flex-col items-center justify-center text-center p-6">
           <h1 className="text-xl font-semibold mb-2">
-            Daily Job Search Limit Reached
+            Monthly Job Search Limit Reached
           </h1>
 
           <p className="text-sm text-gray-600 mb-4">
