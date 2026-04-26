@@ -57,7 +57,7 @@ function Jobs() {
     <div className="col-span-5 flex flex-col gap-3 bg-white  border-1 border-gray-300 border-t-0 border-r-1">
       <h1 className="text-2xl font-semibold p-2">Top job picks for you</h1>
       <h1 className="text-sm p-2">Based on your profile, search history, preferences, unpaid emotional labor, and your ability to click “I Agree” without reading anything</h1>
-      <h1 className="text-sm p-2">314 results</h1>
+      <h1 className="text-sm p-2">2077 results</h1>
 
       <div>
         {jobs.map((job) => {
