@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Home from './Home';
 import Jobs from './Jobs';
 import PremiumModal from './PremiumModal'
@@ -34,6 +34,14 @@ function Application() {
 
   const activeTab = "text-black";
   const inactiveTab = "text-gray-400 hover:text-gray-500";
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPremiumState("true");
+    }, 30000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="bg-[#fff9ed]">
