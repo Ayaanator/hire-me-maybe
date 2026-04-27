@@ -118,7 +118,7 @@ function Home() {
           </div>
         ))}
         
-        <div className="border border-gray-300 p-3 rounded-md bg-gray-100 flex flex-col items-center justify-center text-center">
+        <div className="border border-dashed border-gray-300 p-3 rounded-md bg-gray-100 flex flex-col items-center justify-center text-center">
           <h1 className="text-lg font-semibold mb-2">
             Post limit reached
           </h1>
