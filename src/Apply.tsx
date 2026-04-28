@@ -4,7 +4,7 @@ import jobs from "./jobs.json";
 
 function Apply() {
   const { id } = useParams();
-
+  document.title = "Apply";
   const selectedJob = jobs.find((job) => job.id === Number(id));
   const [captchaNum, setCaptchaNum] = useState(0);
 
@@ -192,7 +192,7 @@ function Apply() {
         Submit Application
       </button>
 
-      <h1 className="text-gray-100">By submitting this application, I consent and give my future employer permission to execute my family if I don't meet performance goals.</h1>
+      <h1 className="text-gray-100">By submitting this application, I consent and give my future employer permission to execute my family if I don't meet  the company's performance goals.</h1>
     </div>
   );
 }
