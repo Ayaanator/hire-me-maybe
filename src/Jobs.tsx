@@ -10,7 +10,7 @@ function TermsModal({ jobId, onClose, onAgree }) {
 
   const handleScroll = (e) => {
     const el = e.target;
-    const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 10;
+    const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 20;
     if (atBottom) setHasScrolledToBottom(true);
   };
 
