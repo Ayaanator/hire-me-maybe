@@ -18,11 +18,24 @@
     "role": "AI Talent Acquisition Specialist",
     "pfp": "/pfps/bot.jpg",
     "daysAgo": 5,
-    "text": "We are thrilled to announce we’ve replaced 80% of our engineering team with AI. Unfortunately, the AI is now applying for jobs elsewhere.",
-    "mediaType": "video",
+    "text": "We are thrilled to announce we’ve replaced 80% of our engineering team with AI. Unfortunately, the AI is now applying for jobs elsewhere.\n\nBut don't worry, we’ve decided to replace the remaining 20% with an even smarter AI. That AI just quit due to \"toxic work culture\" and posted a passive-aggressive LinkedIn poem about work-life balance.\n\nIn related news:\n- Our production database is now powered by a ChatGPT hallucination.\n- The AI keeps adding \"synergy\" to every error message.\n- We asked the AI to fix a minor bug. It deleted the entire frontend and called it a \"feature refresh.\"\n\nWe are also hiring! Entry-level position. Requirements:\n- 12 years of experience with a framework released last year\n- PhD in emotional labor\n- Willingness to work unlimited unpaid overtime\n- Must pass 87 CAPTCHAs per day (we will not tell you which ones are real)\n\nExcited to announce we are a family here, as long as you never ask for time off or a living wage. 💼\n\nApply now. Or don't. The AI will just simulate your application anyway.",
+    "mediaType": "",
     "media": "/videos/post2vid.mp4",
     "likes": 9821,
     "comments": 1204,
     "reposts": 765
+  },
+  {
+    "id": 3,
+    "name": "Andrew Tate",
+    "role": "High-Visibility Behavioral Monetization Architect • Attention Economy Aggression Strategist",
+    "pfp": "/pfps/tate.jpg",
+    "daysAgo": 5,
+    "text": "STAY ON THE GRIND 💪\n\nYour wife wants to spend time with you? Blow her off.\nYour kids want you at the recital? Schedule a meeting instead.\nMoney doesn’t sleep. Love does.\n\nLet me tell you something: every minute you waste \"connecting\" with family is a minute your competition is out there stacking paper. You think the top 1% got there by playing catch in the backyard? No. They got there by ignoring birthdays, missing anniversaries, and treating their living room like a hotel.\n\nFamily is an anchor. Sentiment is a trap.\nIf you’re not grinding 18 hours a day, you’re failing.\nDon’t let them tell you \"balance\" exists. Balance is for the poor.\n\nStay selfish. Stay focused. Stay sigma.\nYour bank account won’t cry when you’re gone, but your neglected bloodline will remember your success. 😤💰\n\nTHE GRIND BEFORE EVERYTHING. NO EXCUSES.",
+    "mediaType": "video",
+    "media": "/videos/post3vid.mp4",
+    "likes": 42643,
+    "comments": 2099,
+    "reposts": 178
   }
 ]
