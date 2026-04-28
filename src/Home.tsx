@@ -43,7 +43,7 @@ function Home() {
                 <img
                   src={post.pfp}
                   alt="profile"
-                  className="w-14 h-14 rounded-full object-cover border border-gray-200"
+                  className="w-14 h-14 min-w-14 min-h-14 rounded-full object-cover border border-gray-200"
                 />
                 <div className="leading-tight">
                   <h1 className="font-semibold">{post.name}</h1>

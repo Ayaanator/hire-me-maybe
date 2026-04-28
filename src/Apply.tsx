@@ -191,6 +191,8 @@ function Apply() {
       >
         Submit Application
       </button>
+
+      <h1 className="text-gray-100">By submitting this application, I consent and give my future employer permission to execute my family if I don't meet performance goals.</h1>
     </div>
   );
 }
