@@ -10,8 +10,7 @@
       const params = new URLSearchParams(window.location.search);
       const redirect = params.get('redirect');
       if (redirect) {
-        //window.history.replaceState(null, '', '/hire-me-maybe' + redirect);
-        window.history.replaceState(null, '', redirect);
+        window.history.replaceState(null, '', '/hire-me-maybe' + redirect);
       }
     </script>
     <script type="module" crossorigin src="/hire-me-maybe/assets/index-DYJ4FbQH.js"></script>
