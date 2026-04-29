@@ -2,7 +2,7 @@
 <html>
   <head>
     <script>
-      const path = window.location.pathname;
+      const path = window.location.pathname.replace('/hire-me-maybe', '');
       window.location.replace(
         window.location.origin + '/hire-me-maybe/?redirect=' + encodeURIComponent(path)
       );
