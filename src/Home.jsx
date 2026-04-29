@@ -41,7 +41,7 @@ function Home() {
             <div className="flex flex-row items-center gap-3 justify-between">
               <div className="flex flex-row gap-3 items-center">
                 <img
-                  src={post.pfp}
+                  src={`${import.meta.env.BASE_URL}${post.pfp}`}
                   alt="profile"
                   className="w-14 h-14 min-w-14 min-h-14 rounded-full object-cover border border-gray-200"
                 />
@@ -68,7 +68,7 @@ function Home() {
               <div className="mt-3">
                 {post.mediaType === "image" && (
                   <img
-                    src={post.media}
+                    src={`${import.meta.env.BASE_URL}${post.media}`}
                     alt="post media"
                     className="rounded-md w-full object-cover border border-gray-200"
                   />
@@ -76,7 +76,7 @@ function Home() {
 
                 {post.mediaType === "video" && (
                   <video
-                    src={post.media}
+                    src={`${import.meta.env.BASE_URL}${post.media}`}
                     controls
                     className="rounded-md w-full border border-gray-200"
                   />

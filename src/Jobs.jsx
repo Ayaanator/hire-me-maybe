@@ -135,7 +135,8 @@ function Jobs() {
 
   const handleTermsAgree = () => {
     setShowTerms(false);
-    window.open(`/apply/${pendingJobId}`, "_blank");
+    //window.open(`/apply/${pendingJobId}`, "_blank");
+    window.open(`${import.meta.env.BASE_URL}apply/${pendingJobId}`, "_blank");
     setPendingJobId(null);
   };
 
@@ -169,7 +170,7 @@ function Jobs() {
               )}
               <div className="flex flex-row gap-3 group">
                 <img
-                  src={job.profile}
+                  src={`${import.meta.env.BASE_URL}${job.profile}`}
                   alt="profile"
                   className="w-16 h-16 object-cover border border-gray-200"
                 />

@@ -5,7 +5,7 @@ import PremiumModal from './PremiumModal.jsx'
 import { usePremium } from './store.js'
 
 function Application() {
-  const [tab, setTab] = useState<"home" | "jobs">("home");
+  const [tab, setTab] = useState("home");
   const setPremiumState = usePremium((state) => state.setPremiumState);
   document.title = "HireMeMaybe";
 

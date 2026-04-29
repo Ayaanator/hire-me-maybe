@@ -7,7 +7,7 @@
     "workType": "On-site",
     "employmentType": "Full-time",
     "salary": "CA$20K/yr - CA$30k/yr",
-    "profile": "/profiles/dollarama.jpg",
+    "profile": "profiles/dollarama.jpg",
     "tags": [
       "Perceived Need Engineering",
       "Retail Existentialism",
@@ -59,7 +59,7 @@
     "workType": "On-site",
     "employmentType": "Full-time",
     "salary": "CA$30K/yr - CA$40k/yr",
-    "profile": "/profiles/freshco.jpg",
+    "profile": "profiles/freshco.jpg",
     "tags": [
       "Entry-Level Senior Role",
       "Buzzword Fluency",
@@ -111,7 +111,7 @@
     "workType": "On-site",
     "employmentType": "Full-time",
     "salary": "CA$10K/yr - CA$20k/yr",
-    "profile": "/profiles/amazon.jpg",
+    "profile": "profiles/amazon.jpg",
     "tags": [
       "Streak Optimization",
       "Clarity Engineering",
@@ -160,7 +160,7 @@
     "workType": "On-site",
     "employmentType": "Full-time",
     "salary": "CA$40K/yr - CA$50k/yr",
-    "profile": "/profiles/google.jpg",
+    "profile": "profiles/google.jpg",
     "description": "PREMIUM_PAYWALL"
   },
   {
@@ -171,7 +171,7 @@
     "workType": "Hybrid",
     "employmentType": "Full-time",
     "salary": "CA$70K/yr - CA$95k/yr",
-    "profile": "/profiles/stripe.jpg",
+    "profile": "profiles/stripe.jpg",
     "description": "PREMIUM_PAYWALL"
   },
   {
@@ -182,7 +182,7 @@
     "workType": "On-site",
     "employmentType": "Full-time",
     "salary": "CA$80K/yr - CA$110k/yr",
-    "profile": "/profiles/deepmind.jpg",
+    "profile": "profiles/deepmind.jpg",
     "description": "PREMIUM_PAYWALL"
   },
   {
@@ -193,7 +193,7 @@
     "workType": "On-site",
     "employmentType": "Full-time",
     "salary": "CA$25K/yr - CA$30k/yr",
-    "profile": "/profiles/walmart.jpg",
+    "profile": "profiles/walmart.jpg",
     "description": "PREMIUM_PAYWALL"
   },
   {
@@ -204,7 +204,7 @@
     "workType": "Hybrid",
     "employmentType": "Full-time",
     "salary": "CA$60K/yr - CA$85k/yr",
-    "profile": "/profiles/spotify.jpg",
+    "profile": "profiles/spotify.jpg",
     "description": "PREMIUM_PAYWALL"
   }
 ]
