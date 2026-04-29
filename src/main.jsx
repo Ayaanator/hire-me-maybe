@@ -8,7 +8,7 @@ import Apply from './Apply';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/hire-me-maybe">
       <Routes>
         <Route path="/apply/:id" element={<Apply />} />
         <Route path="/" element={<Application />} />
