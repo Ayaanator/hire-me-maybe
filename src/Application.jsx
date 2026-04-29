@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import Home from './Home';
-import Jobs from './Jobs';
-import PremiumModal from './PremiumModal'
+import Home from './Home.jsx';
+import Jobs from './Jobs.jsx';
+import PremiumModal from './PremiumModal.jsx'
 import { usePremium } from './store.js'
 
 function Application() {
@@ -11,7 +11,7 @@ function Application() {
 
   const tabs = [
     {
-      id: "home" as const,
+      id: "home",
       label: "Home",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
@@ -20,7 +20,7 @@ function Application() {
       ),
     },
     {
-      id: "jobs" as const,
+      id: "jobs",
       label: "Jobs",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">

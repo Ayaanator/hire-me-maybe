@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import jobs from './jobs.json'
 import { useInteract, useJob, usePremium } from './store.js'
-import PremiumModal from './PremiumModal'
-import CreditModal from './CreditModal'
-import InteractModal from './InteractModal'
+import PremiumModal from './PremiumModal.jsx'
+import CreditModal from './CreditModal.jsx'
+import InteractModal from './InteractModal.jsx'
 
 function TermsModal({ jobId, onClose, onAgree }) {
   const [hasScrolledToBottom, setHasScrolledToBottom] = useState(false);

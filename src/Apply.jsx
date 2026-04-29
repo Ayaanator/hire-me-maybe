@@ -8,14 +8,14 @@ function Apply() {
   const selectedJob = jobs.find((job) => job.id === Number(id));
   const [captchaNum, setCaptchaNum] = useState(0);
 
-  const [resume, setResume] = useState<File | null>(null);
+  const [resume, setResume] = useState(null);
   const [experience, setExperience] = useState("");
   const [coverLetter, setCoverLetter] = useState("");
   const [availability, setAvailability] = useState("");
   const [relocate, setRelocate] = useState("");
   const [salaryExpectations, setSalaryExpectations] = useState("");
 
-  const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [answers, setAnswers] = useState({});
 
   if (!selectedJob) {
     return (

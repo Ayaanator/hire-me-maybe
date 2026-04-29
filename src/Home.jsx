@@ -1,11 +1,11 @@
 import posts from './posts.json'
 import { Heart, MessageCircle, Repeat2, Send } from 'lucide-react'
 import { useInteract, usePremium } from './store.js'
-import PremiumModal from './PremiumModal'
-import CreditModal from './CreditModal'
-import News from './News'
-import Profile from './Profile'
-import InteractModal from './InteractModal'
+import PremiumModal from './PremiumModal.jsx'
+import CreditModal from './CreditModal.jsx'
+import News from './News.jsx'
+import Profile from './Profile.jsx'
+import InteractModal from './InteractModal.jsx'
 
 function Home() {
   const setInteractState = useInteract((state) => state.setInteractState);
