@@ -39,7 +39,7 @@ function CreditModal() {
           Pay $299.99
         </button>
 
-        <div className="text-xs mt-3 text-gray-100">
+        <div className="text-xs mt-3 text-gray-300">
           + $89.99 one time purchase fee <br></br>+ 40% ($119.99) sales tax
         </div>
 

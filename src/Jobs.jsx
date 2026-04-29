@@ -267,7 +267,7 @@ function Jobs() {
 
             <h3 className="font-semibold mt-2 mb-2">Salary</h3>
             <h1>{selectedJob.salary}</h1>
-            <h1 className="text-gray-100">Compensation, equity, bonuses, pension, and vacation days not included</h1>
+            <h1 className="text-gray-300">Compensation, equity, bonuses, pension, and vacation days not included</h1>
           </div>
         </>
       ) : (
